@@ -1,0 +1,9 @@
+Module
+  name: game_actionbar_clean
+  description: Modular action bar for OTCv8 clean
+  author: OpenAI
+  website: https://github.com/edubart/otclient
+  sandboxed: true
+  scripts: [ state, cooldown, assignment, preset, actionbar ]
+  @onLoad: init()
+  @onUnload: terminate()

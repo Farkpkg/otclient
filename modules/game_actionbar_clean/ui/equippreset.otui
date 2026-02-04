@@ -1,0 +1,54 @@
+EquipmentPresetWindow < UIWindow
+  id: equipmentPreset
+  size: 280 220
+  text: Equipment Preset
+  draggable: true
+  focusable: true
+
+  Panel
+    id: slotsPanel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin: 8
+    layout:
+      type: grid
+      columns: 3
+      cell-size: 50 50
+      cell-spacing: 6
+
+    UIItem
+      id: headSlot
+    UIItem
+      id: necklaceSlot
+    UIItem
+      id: rightSlot
+    UIItem
+      id: bodySlot
+    UIItem
+      id: ringSlot
+    UIItem
+      id: leftSlot
+    UIItem
+      id: legsSlot
+    UIItem
+      id: ammoSlot
+    UIItem
+      id: feetSlot
+
+  UIButton
+    id: applyButton
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin: 8
+    text: Apply
+    @onClick: ActionBarPreset.apply()
+
+  UIButton
+    id: closeButton
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin: 8
+    text: Close
+    @onClick: ActionBarPreset.hide()
